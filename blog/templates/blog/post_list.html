@@ -10,14 +10,13 @@
         </div>
 
         <div>
-            <p>published: 16.12.2019, 20:46</p>
-            <h2><a href="#">My first post</a></h2>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-        </div>
-        <div>
-            <p>published: 16.12.2019, 20:50</p>
-            <h2><a href="#">My second post</a></h2>
-            <p>Suspendisse mi risus, dictum sed tincidunt vitae, fringilla non risus. Vestibulum eleifend non enim vel sagittis. </p>
+            {% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
         </div>
     </body>
 </html>
