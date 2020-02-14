@@ -4,15 +4,20 @@ h2 a, h2, h2 a:hover, h2 a:visited {
     font-size: 26px;
 }
 
+.glyphicon-arrow-right {
+    color: #3A1FB2;
+    font-size: 18px;
+}
+
 .txt {
     color: #0C0F08;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .date {
     color: #4D3EFF;
     font-family: 'Caveat', cursive;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 body {
