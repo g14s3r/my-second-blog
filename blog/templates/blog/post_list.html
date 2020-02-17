@@ -4,11 +4,47 @@
     {% for post in posts %}
         <div class="post">
             <div class="date">
-                Опубликовано: {{ post.published_date }} - {{ post.author }}
+                {{ post.published_date }} - {{ post.author }}
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p class="txt">{{ post.text|linebreaksbr|truncatewords:20 }} <a href="{% url 'post_detail' pk=post.pk %}"><span class="glyphicon glyphicon-arrow-right"></a>
-            </p>
+            <p class="txt">{{ post.text|linebreaksbr|truncatewords:20 }}</a></p>
+            <!--<p><a href="{% url 'post_detail' pk=post.pk %}"><span class="glyphicon glyphicon-arrow-right"></p>-->
+            <a class="btn btn-info btn-sm" href="{% url 'post_detail' pk=post.pk %}" role="button">Читать дальше  <span class="glyphicon glyphicon-circle-arrow-right"></a>
         </div>
     {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if posts.has_previous %}
+                <a class="btn btn-info btn-sm" href="?page={{ posts.previous_page_number }}" role="button"><span class="glyphicon glyphicon-step-backward">Назад</a>
+            {% endif %}
+
+            <span class="currnet">
+                Страница <b>{{ posts.number }}</b> из {{ posts.paginator.num_pages }}.
+            </span>
+
+            {% if posts.has_next %}
+                <a class="btn btn-info btn-sm" href="?page={{ posts.next_page_number }}" role="button">Вперёд<span class="glyphicon glyphicon-step-forward"></a>
+            {% endif %}
+        </span>
+    </div>
+
+    <!--{% block pagination %}
+        {% if is_paginated %}
+            <div class="pagination">
+                <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+                    <span class="page-current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        {% endif %}
+    {% endblock %}-->
+
 {% endblock %}

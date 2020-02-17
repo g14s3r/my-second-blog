@@ -1,11 +1,10 @@
 h2 a, h2, h2 a:hover, h2 a:visited {
-    color: #3A1FB2;
+    color: #17A2B8;
     font-family: 'Pasifico', cursive;
     font-size: 26px;
 }
 
 .glyphicon-arrow-right {
-    color: #3A1FB2;
     font-size: 18px;
 }
 
@@ -15,7 +14,7 @@ h2 a, h2, h2 a:hover, h2 a:visited {
 }
 
 .date {
-    color: #4D3EFF;
+    color: #17A2B8;
     font-family: 'Caveat', cursive;
     font-size: 20px;
 }
@@ -25,13 +24,13 @@ body {
 }
 
 .page-header {
-    background-color: #3A1FB2;
+    background-color: #17A2B8;
     margin-top: 0;
     padding: 20px 20px 35px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #DB5E27;
+    color: #FDF43F;
     font-family: 'Pasifico', cursive;
     font-size: 36pt;
     text-decoration: none;
@@ -50,12 +49,18 @@ body {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #EBEBEB;
-    font-size: 24px;
+    color: #F8F9FA;
+    font-size: 36px;
     float: right;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 .post {
     margin-bottom: 60px;
+}
+
+.btn {
+    font-family: 'Pasifico', cursive;
+    font-size: 12px;
 }
